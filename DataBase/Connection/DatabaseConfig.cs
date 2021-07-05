@@ -4,11 +4,7 @@ namespace projetos.DataBase.Connection.DatabaseConfig
 {
     public class DatabaseConfig
     {
-        private string _connectionString;
-        protected string ConnectionString => _connectionString;
-        public DatabaseConfig(IConfiguration configuration)
-        {
-            _connectionString = configuration.GetValue<string>("ConnectionString:DatabaseName");
-        }
+        public string Connection { get; }
+        public DatabaseConfig(string _connection) => Connection = _connection;
     }
 }
