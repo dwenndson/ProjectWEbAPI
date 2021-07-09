@@ -29,8 +29,8 @@ namespace projetos
         public void ConfigureServices(IServiceCollection services)
         {
             //SQL banco de dados connection
-            var connection = new DatabaseConfig(Configuration.GetConnectionString("DatabaseName"));
-            services.AddSingleton(connection);
+            var SqliteConnection = new DatabaseConfig(Configuration.GetConnectionString("DatabaseName"));
+            services.AddSingleton(SqliteConnection);
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
