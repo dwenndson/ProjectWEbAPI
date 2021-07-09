@@ -7,7 +7,7 @@ namespace projetos.DataBase.Repository.Interfaces.Base
     {
         Task<T> GetId(long id);
         void Create(T _object);
-        IEnumerable<T> GetAll();
+        Task<IEnumerable<T>> GetAll();
         Task<string> Update(long id);
         Task<string> Delete(long id);
     }
