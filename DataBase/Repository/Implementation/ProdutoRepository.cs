@@ -101,10 +101,10 @@ namespace projetos.DataBase.Repository.Implementation
                 {
                     conn.Open();
                     const string query = @"UPDATE Produto SET Nome = @Nome,
-                     Ativo = @Ativo, Descricao = @Descricao, Valor = @Valor, 
-                     Quantidade = @Quantidade WHERE (Id = @Id)";
-                     await conn.QueryAsync(query, new {id}, commandType: CommandType.Text);
-                     return "Produto Alterado";
+                        Ativo = @Ativo, Descricao = @Descricao, Valor = @Valor, 
+                        Quantidade = @Quantidade WHERE (Id = @Id)";
+                    await conn.QueryAsync(query, new {id}, commandType: CommandType.Text);
+                    return "Produto Alterado";
                 }
             }
             catch (Exception e)
